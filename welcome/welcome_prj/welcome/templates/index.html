@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>이름과 생년월일을 입력하세요!</h2>
+    <form action="{% url 'welcome:welcome' %}">
+        <input type="text" name="name_input" placeholder="이름을 입력하세요"><br>
+        <input type="number" name="year_input" placeholder="년">년
+        <input type="number" name="month_input" placeholder="월">월
+        <input type="number" name="day_input" placeholder="일">일<br>
+
+        <br><button type="submit">제출</button>
+    </form>
+</body>
+</html>
