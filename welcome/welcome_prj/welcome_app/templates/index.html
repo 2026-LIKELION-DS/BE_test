@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 제목</title>
+</head>
+<body>
+    <h1>이름과 생년월일을 입력하세요!</h1>
+
+
+<form action="{% url 'welcome_app:welcome' %}" method="get">
+    <input type="text" name="name" placeholder="이름 입력" required>
+    <br />
+
+    <input type="text" name="birthyear" placeholder="년도 입력" required>년
+
+    <input type="text" name="birthmonth" placeholder="월 입력" required>일
+
+    <input type="text" name="birthday" placeholder="일 입력" required>월
+    <br />
+
+    <button type="submit">제출</button>
+</form>
+</body>
+</html>
