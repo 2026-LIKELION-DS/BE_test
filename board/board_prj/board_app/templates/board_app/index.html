@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>방명록 작성</h1>
+    <form method="POST">
+      {% csrf_token %}{{boardform.as_p}}
+      <button type="submit">작성하기</button>
+    </form>
+    <hr />
+    <h1>방명록 목록</h1>
+    {% for board in boardlist %}
+    <p>{{board.username}} ({{board.stdnum}}) - {{board.message}}</p>
+    {% empty %}
+    <p>작성된 방명록이 없습니다.</p>
+    {% endfor %}
+  </body>
+</html>
