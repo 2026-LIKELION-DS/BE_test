@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>강의 목록</title>
+</head>
+<body>
+
+    <h1>강의 목록</h1>
+
+    {% for lecture in lectures %}
+        <p>-{{ lecture.code }} {{ lecture.title }}- {{ lecture.professor.name }}</p>
+    {% empty %}
+        <p>등록된 강의가 없습니다.</p>
+    {% endfor %}
+
+</body>
+</html>
