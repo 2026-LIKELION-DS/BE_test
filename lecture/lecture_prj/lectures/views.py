@@ -18,7 +18,6 @@ def professor_list(request):
 def student_list(request):
     students = Student.objects.all()
     lectures = Lecture.objects.all()
-    # 쉼표로 구분해서 한 묶음으로 만듭니다.
     return render(request, 'lectures/student_list.html', {
         'lectures': lectures, 
         'students': students
