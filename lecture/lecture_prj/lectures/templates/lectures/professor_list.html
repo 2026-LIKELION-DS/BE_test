@@ -8,7 +8,7 @@
 <body>
     <h1>교수 목록<h1>
     {% for pro in professors %}
-    -{{ pro.name}} : {{ pro.email }}
+    <h3>-{{ pro.name}} : {{ pro.email }}</h3>
     {% empty %} 등록된 교수가 없습니다.
     {% endfor %}
 
