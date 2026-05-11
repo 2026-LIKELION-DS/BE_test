@@ -9,8 +9,12 @@
     <h2>학생 목록</h2>
     {% for student in students %}
     <h4>- {{student.student_id}} {{ student.name }}</h4>
-    수강 강의:<br>
-        - {{ student.lecture.code }} {{ student.lecture.title }}<br><hr>
+    수강 강의 목록:<br>
+        {% for lecstu in student.lecture_student.all %}
+        - [{{ lecstu.lecture.code }}] {{ lecstu.lecture.title }} - 수강 신청일 : {{ lecstu.enrolled_at }}<br>
+        {% empty %} {수강 중인 강의 없음}<br>
+        {% endfor %}
+        <hr>
 
     {% empty %}
     등록된 학생이 없습니다.
